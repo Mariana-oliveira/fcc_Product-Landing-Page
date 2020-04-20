@@ -6,12 +6,17 @@
     <title>Product Landing Page</title>
     <link rel="stylesheet" href="assets/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Oswald&display=swap" rel="stylesheet"> 
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 </head>
 <body>
     <header id="header">
 
-        <a href="#home"><img id="header-img" src="images/Grupo 2@2x.jpg" alt="Company logo"></a>
+        <a href="#home" id="header-logo"><img id="header-img" src="images/Grupo 2@2x.jpg" alt="Company logo"></a>
+
+        <form action="" id="search-form">
+            <input id="search" type="search" placeholder="Search here">
+            <a href="#" id="search-btn" class="iconbtn fas fa-search"></a>
+        </form>
 
         <nav id="nav-bar">
             <ul>
@@ -21,6 +26,8 @@
                 <li><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
         </nav>
+        
+        <a href="#" id="header-shop-cart"  class="iconbtn fas fa-shopping-cart"></a>
     </header>
 
     <main id="main">
@@ -32,22 +39,31 @@
             </div>
 
 
-            <iframe id="video" src="videos/video.mp4" frameborder="0" width="50%" height="500"></iframe>
+            <video id="video" width="70%" height="600px" playsinline autoplay muted loop>
+                <source src="videos/video.mp4">
+                Sorry, your browser doesn't support embedded videos.
+            </video>
         </section>
 
         <section id="living-room">
-            <img src="images/living-room/devon-janse-van-rensburg-DU8Z5djVJtg-unsplash.jpg" alt="">
-            <img src="images/living-room/kara-eads-L7EwHkq1B2s-unsplash.jpg" alt="">
-            <img src="images/living-room/patrick-perkins-3wylDrjxH-E-unsplash.jpg" alt="">
+            <h1>Living Room</h1>
+                <img src="images/living-room/devon-janse-van-rensburg-DU8Z5djVJtg-unsplash.jpg" alt="">
+                <img src="images/living-room/kara-eads-L7EwHkq1B2s-unsplash.jpg" alt="">
+                <img src="images/living-room/patrick-perkins-3wylDrjxH-E-unsplash.jpg" alt="">
         </section>
 
         <section id="bedroom">
+            <h1>Bedroom</h1>
             <img src="images/bedroom/alexander-kaunas-7ZD_JIwl410-unsplash.jpg" alt="">
             <img src="images/bedroom/devon-janse-van-rensburg-_WEDFTZV0qU-unsplash.jpg" alt="">
             <img src="images/bedroom/roberto-nickson-emqnSQwQQDo-unsplash.jpg" alt="">
         </section>
-        <section id="kitchen-dinning">
 
+        <section id="kitchen-dinning">
+            <h1>Kitchen & Dinning</h1>
+            <img src="images/kitchen-dinning/becca-tapert-uGak0qtrphM-unsplash.jpg" alt="">
+            <img src="images/kitchen-dinning/christian-mackie-SxBca4GcC9k-unsplash.jpg" alt="">
+            <img src="images/kitchen-dinning/creatv-eight-RryFk4n-vOs-unsplash.jpg" alt="">
         </section>
 
         <section id="contact">

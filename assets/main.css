@@ -85,7 +85,7 @@ body{
     background-color: VAR(--head-color);
     color: var(--font-color);
     font-family: 'Merriweather', serif;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     line-height: 1.5;
 }
 
@@ -97,9 +97,35 @@ body{
 */
 
 #header{
-    display: flex;
+    display: grid;
+    position: fixed;
+    width: 100%;
+    top:0;
+    left: 0;
+    background-color: var(--head-color);
     color: var(--highlight-color);
-    margin: 20px auto 20px auto;
+    padding-top: 20px;
+    grid-template-columns: 1.5fr 3fr 1fr;
+    grid-template-rows: 50px 50px;
+    grid-template-areas:
+      "logo search shop"
+      "logo nav shop";
+}
+
+#header-logo{
+    grid-area: logo;
+    justify-self: center;
+    align-self: center;
+}
+
+#header-img{
+    width: 300px;
+}
+
+#nav-bar{
+    grid-area: nav;
+    justify-self: center;
+    align-self: center;
 }
 
 #nav-bar ul{
@@ -107,7 +133,7 @@ body{
 }
 
 #nav-bar li{
-    margin-left: 20px;
+    margin-left: 30px;
 }
 
 #nav-bar a{
@@ -115,17 +141,77 @@ body{
     color: var(--highlight-color);
 }
 
-
-#header-img{
-    width: 300px;
+#nav-bar a:hover{
+    color: var(--bg-color);
 }
 
+#search-form{
+    justify-self: center;
+    align-self: center;
+}
+
+#search{
+    height: 30px;
+    width: 20rem;
+    border: 1px solid var(--highlight-color);
+    color: var(--highlight-color);  
+    border-radius: 5px;
+    justify-self: center;
+    align-self: center;
+}
+
+#search-btn{
+    width: 30px;
+    height: 30px;
+    font-size: 22px;
+    color: var(--head-color);
+    background-color: var(--highlight-color);
+    border: 1px solid var(--highlight-color);
+    border-radius: 5px;
+    margin-left: -35px;
+}
+
+#search-btn:active{
+    font-size: 25px;
+    width: 32px;
+    height: 32px;
+}   
+
+#header-shop-cart{
+    grid-area: shop;
+    justify-self: center;
+    align-self: center;
+}
+
+.iconbtn{
+    width: 60px;
+    height: 60px;
+    color: var(--highlight-color);
+    text-decoration: none;
+    position: relative;
+    font-size: 40px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.iconbtn:hover{
+    color: var(--bg-color);
+}
+
+.iconbtn:active{
+    color: var(--bg-color);
+    font-size: 42px;
+}
 
 /*
     ======================================================
     HOME
     ======================================================
 */
+
+#main{
+    margin-top: 120px;
+}
 
 #home{
     background-color: var(--bg-color);
@@ -135,25 +221,29 @@ body{
 
 .home-titles{
     display: flex;
-    margin: 0 auto 50px auto; 
+    margin: 0 auto 30px auto; 
+    align-items: center;
 }
 
 #home h1{
     font-family: 'Oswald', sans-serif;
     font-size: 6rem;
     line-height: 1;
+    width: 50%;
+    text-align: center;
 }
 
 #home h2{
     font-size: 3rem;
-    margin-left: 50px;
     line-height: 1;
+    width: 50%;
+    text-align: center;
 }
 
 
-iframe{
+#video{
     display: block;
-    margin: 50px auto;
+    margin: 0px auto;
 }
 
 
@@ -165,11 +255,12 @@ iframe{
 
 #living-room{
     display: flex;
-    padding: 30px 10px;
+    padding: 30px 0;
 }
 
 #living-room img{
-    width: 30%;
+    width: 33%;
+    padding: 0 1.6%;
 }
 
 /*
@@ -180,11 +271,12 @@ iframe{
 
 #bedroom{
     display: flex;
-    padding: 30px 10px;
+    padding: 30px 0;
 }
 
 #bedroom img{
-    width: 30%;
+    width: 33%;
+    padding: 0 1.6%;
 }
 
 /*
@@ -195,8 +287,10 @@ iframe{
 
 #kitchen-dinning{
     display: flex;
+    padding: 30px 0;
 }
 
 #kitchen-dinning img{
-    width: 30%;
+    width: 33%;
+    padding: 0 1.6%;
 }
