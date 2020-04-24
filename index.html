@@ -16,25 +16,24 @@
     <header id="header">
 
         <div class="logo-container">
-            <a href="#home" id="header-logo"><img id="header-img" src="images/Grupo 2@2x.jpg" alt="Company logo"></a>
+            <a href="#home" class="logo"><img id="header-img" src="images/Grupo 2@2x.jpg" alt="Company logo"></a>
         </div>
-
 
         <div class="search-nav-container">
             <form action="" id="search-form">
 
                 <a href="#" id="search-btn" class="iconbtn fas fa-search"></a>
 
-                <input id="search" type="search" placeholder="Search here">  
+                <input id="search" class="input-box" type="search" placeholder="Search here">  
 
             </form>
     
             <nav id="nav-bar">
                 <ul>
-                    <li><a class="nav-link" href="#">Living Room</a></li>
-                    <li><a class="nav-link" href="#">Bedroom</a></li>
-                    <li><a class="nav-link" href="#">Kitchen & Dinning</a></li>
-                    <li><a class="nav-link" href="#">Contact</a></li>
+                    <li><a class="nav-link" href="#header">Living Room</a></li>
+                    <li><a class="nav-link" href="#header">Bedroom</a></li>
+                    <li><a class="nav-link" href="#header">Kitchen & Dinning</a></li>
+                    <li><a class="nav-link" href="#header">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -101,22 +100,73 @@
         <section id="clearance-deals">
             <h1 class="section-title">Clearance Deals</h1>
             <div class="clearance-deals-content">
-                <img src="images/clearance-deals/abel-y-costa-jb-SMviXCjI-unsplash.jpg" alt="">
-                <img src="images/clearance-deals/i-m__prakhar-kont-AgU9-qsNc1Y-unsplash.jpg" alt="">
-                <img src="images/clearance-deals/kari-shea-ItMggD0EguY-unsplash.jpg" alt="">
+
+                <div class="product">
+                    <img src="images/clearance-deals/abel-y-costa-jb-SMviXCjI-unsplash.jpg" alt="">
+                    <p class="product-description">Coffee Table</p>
+                    <p class="product-price">50€</p>
+                </div>
+
+                <div class="product">
+                    <img src="images/clearance-deals/i-m__prakhar-kont-AgU9-qsNc1Y-unsplash.jpg" alt="">
+                    <p class="product-description">Pineapple Lamp</p>
+                    <p class="product-price">30€</p>
+                </div>
+
+                <div class="product">
+                    <img src="images/clearance-deals/kari-shea-ItMggD0EguY-unsplash.jpg" alt="">
+                    <p class="product-description">Soft Sofa</p>
+                    <p class="product-price">90€</p>
+                </div>             
             </div>
+            <a href="#"><span>+</span> See More</a>
         </section>
 
 
     </main>
 
     <footer id="footer">
-        <form action="">
-            <label for="email">Subscribe to receive news, special offers and other information from Maynooth: </label>
-            <input id="email" type="email" placeholder="Enter your email address">
-            <button id="submit" type="submit">Subscribe</button>
+
+        <div class="logo-container">
+            <a href="#home" id="logo"><img src="images/Grupo 2@2x.jpg" alt="Company logo"></a>
+        </div>
+
+        <div class="container">
+            <ul>
+                <li>About Us</li>
+                <li>Contact</li>
+                <li>Terms & Conditions</li>
+            </ul>
+        </div>
+
+        <div class="container small-container">
+            <ul>
+                <li><i class="fab fa-facebook-f"></i> Facebook</li>
+                <li><i class="fab fa-twitter"></i>  Twitter</li>
+                <li><i class="fab fa-instagram"></i>  Instagram</li>
+            </ul>
+        </div>
+
+
+        <form action="https://www.freecodecamp.com/email-submit" id="form" class="container bigger-container">
+
+            <label for="email">Subscribe to our newsletter: </label>
+            <input id="email" class="input-box" type="email" name="email" placeholder="Email Address" required>
+
+            <input type="submit" id="submit" value="Ok"/>
         </form>
+
+        <div class="container bigger-container">
+            <ul>
+                <li>497 Evergreen Rd. Roseville, CA 95673</li>
+                <li>+44 345 678 903</li>
+                <li>adobexd@mail.com</li>
+            </ul>
+        </div>
+
     </footer>
+
+
 
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     
