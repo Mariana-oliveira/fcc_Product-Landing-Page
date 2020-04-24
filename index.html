@@ -7,30 +7,44 @@
     <link rel="stylesheet" href="assets/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Oswald&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.min.css">
+
 </head>
 <body>
 
     <header id="header">
 
-        <a href="#home" id="header-logo"><img id="header-img" src="images/Grupo 2@2x.jpg" alt="Company logo"></a>
+        <div class="logo-container">
+            <a href="#home" id="header-logo"><img id="header-img" src="images/Grupo 2@2x.jpg" alt="Company logo"></a>
+        </div>
 
-        <form action="" id="search-form">
-            <a href="#" id="search-btn" class="iconbtn fas fa-search"></a>
-            <input id="search" type="search" placeholder="Search here">            
-        </form>
 
-        <nav id="nav-bar">
-            <ul>
-                <li><a class="nav-link" href="#">Living Room</a></li>
-                <li><a class="nav-link" href="#">Bedroom</a></li>
-                <li><a class="nav-link" href="#">Kitchen & Dinning</a></li>
-                <li><a class="nav-link" href="#">Contact</a></li>
-            </ul>
-        </nav>
-        
-        <a href="#" id="header-shop-cart"  class="iconbtn fas fa-shopping-cart"></a>
+        <div class="search-nav-container">
+            <form action="" id="search-form">
 
-        <a href="#" id="login"  class="iconbtn fas fa-user"></a>
+                <a href="#" id="search-btn" class="iconbtn fas fa-search"></a>
+
+                <input id="search" type="search" placeholder="Search here">  
+
+            </form>
+    
+            <nav id="nav-bar">
+                <ul>
+                    <li><a class="nav-link" href="#">Living Room</a></li>
+                    <li><a class="nav-link" href="#">Bedroom</a></li>
+                    <li><a class="nav-link" href="#">Kitchen & Dinning</a></li>
+                    <li><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="btn-container">
+            <a href="#" id="header-shop-cart"  class="iconbtn fas fa-shopping-cart"></a>
+
+            <a href="#" id="login"  class="iconbtn fas fa-user"></a>
+        </div>
+
 
     </header>   
 
@@ -38,31 +52,54 @@
     <main id="main">
 
         <section id="home">
+
             <div class="home-titles">
                 <h1>Celebrate Easter <br> Your Own Way</h1>
-                <h2>The latest discounts <br> for the HOME you <br> want</h2>
+
+                <div class="discount-container">
+
+                    <h2>The latest discounts <br> for the HOME you <br> want</h2>
+
+                    <form action="" class="discount-form">
+                        <button class="btn-shop">Shop Now</button>
+                    </form>
+
+                </div>
+                
             </div>
 
-
-            
         </section>
 
         <section id="inspiration">
-            <h1>Inspiration</h1>
-            <div class="inspiration-content">
-                <img src="images/inspiration/winter-garden-2721407_1280.jpg" alt="">
-                <img src="images/inspiration/window-3042834_1280.jpg" alt="">
-                <img src="images/inspiration/george-eastman-house-70173_1280.jpg" alt="">
+            <h1 class="section-title">Inspiration</h1>
+            <div class="col-8">
+                <div class="glide">
+                    <div class="glide__track" data-glide-el="track">
+                        <ul class="glide__slides">
+                        <li class="glide__slide"><img src="images/inspiration/winter-garden-2721407_1280.jpg" height:"500px" alt=""></li>
+                        <li class="glide__slide"><img src="images/inspiration/window-3042834_1280.jpg" height:"500px" alt=""></li>
+                        <li class="glide__slide"><img src="images/inspiration/george-eastman-house-70173_1280.jpg" height:"500px" alt=""></li>
+                        </ul>
+                    </div>
+                   
+                    <div class="glide__arrows" data-glide-el="controls">
+                        <button class="glide__arrow glide__arrow--left" data-glide-dir=">"><i class="fas fa-angle-left"></i></button>
+                        <button class="glide__arrow glide__arrow--right" data-glide-dir="<"><i class="fas fa-angle-right"></i></button>
+                    </div>
+    
+                </div>
             </div>
-                <video id="video" width="70%" height="600px" playsinline autoplay muted loop>
-                    <source src="videos/video.mp4">
-                    Sorry, your browser doesn't support embedded videos.
-                </video>
+  
+
+            <video id="video" width="70%" height="600px" playsinline autoplay muted loop>
+                <source src="videos/video.mp4">
+                Sorry, your browser doesn't support embedded videos.
+            </video>
             
         </section>
 
         <section id="clearance-deals">
-            <h1>Clearance Deals</h1>
+            <h1 class="section-title">Clearance Deals</h1>
             <div class="clearance-deals-content">
                 <img src="images/clearance-deals/abel-y-costa-jb-SMviXCjI-unsplash.jpg" alt="">
                 <img src="images/clearance-deals/i-m__prakhar-kont-AgU9-qsNc1Y-unsplash.jpg" alt="">
@@ -82,5 +119,18 @@
     </footer>
 
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
+  
+    <script>
+        new Glide('.glide', {
+            type: 'carousel',
+            startAt: 0,
+            perView: 3,
+            focusAt: 'center',
+            }).mount()
+    </script>
+
 </body>
+
 </html>
