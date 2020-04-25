@@ -101,6 +101,8 @@ body{
     flex-direction: row;
     flex-wrap: nowrap;
     position: fixed;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     top:0;
     left: 0;
@@ -115,16 +117,9 @@ body{
     width: 25%;
 }
 
-.logo{
-    display: inline-block;
-    width: 100%;
-}
-
 #header-img{
     display: block;
     width: 300px;
-    margin: 0 auto;
-
 }
 
 
@@ -133,6 +128,9 @@ body{
     width: 50%;
 }
 
+.search-nav-container label, #toggle{
+    display: none;
+}
 
 #nav-bar ul{
     display: flex;
@@ -233,9 +231,12 @@ body{
 
 #home{
     background-image: url("../images/home/interior-3575815_1920.jpg");
+    background-position: center center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
-    height: 900px;
+    width: 100%;
+    height:800px;
     padding: 30px;
 }
 
@@ -337,7 +338,6 @@ body{
 }
 
 
-
 /*
     ======================================================
     Clearance Deals
@@ -346,7 +346,7 @@ body{
 
 .clearance-deals-content{
     display: flex;
-    width: 66%;
+    width: 80%;
     margin: 0 auto;
     justify-content: center;
 }
@@ -393,7 +393,7 @@ body{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    width: 70%;
+    width: 90%;
     justify-content: center;
     align-items: center;
     bottom:0;
@@ -451,3 +451,359 @@ body{
     width: 50px;
     height: 30px;
 }
+
+.notes{
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--highlight-color);
+    line-height: 1.2rem;
+    margin: 30px 0;
+}
+
+.notes a{
+    color: var(--bg-color);
+    text-decoration: none;
+}
+
+
+/*
+    ======================================================
+    Media Queries
+    ======================================================
+*/
+@media screen and (max-width:1400px){
+    .product img{
+        height: 300px;
+    }
+}
+/* TABLET */
+@media screen and (max-width:1200px){
+
+    /* Header */
+    #header-img{
+        width: 200px;
+    }
+    
+    .search-nav-container{
+        width: 70%;
+    }
+
+    #nav-bar li{
+        margin-left: 15px;
+    }
+
+    #nav-bar a{
+        font-size: 1rem;
+    }
+
+
+    .btn-container{
+        width: 20%;
+    }
+
+    .iconbtn{
+        font-size: 30px
+    }
+    
+
+    /* Home */
+    #home h1{
+        font-size: 4rem;
+        width: 50%;
+        margin-bottom: 20px;
+    }
+    
+    
+    #home h2{
+        font-size: 2rem;
+    }
+
+
+    /* Inspiration*/
+    .section-title{
+        font-size: 1.7rem;
+        margin: 25px 0;
+    }
+
+    .col-8{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .glide__arrows{
+        position: absolute;
+        display: block;
+        bottom: -10px;
+        width: 100%; 
+    }
+
+
+    .glide__arrows .glide__arrow{
+        font-size: 2rem;
+        display: block;
+        width: 100%; 
+        margin: 0 auto;
+    }
+
+    .glide__arrows .glide__arrow.glide__arrow--left{
+        left: -20px;
+        
+    }
+    
+    .glide__arrows .glide__arrow.glide__arrow--right{
+        right: -20px;
+    }
+
+
+    #video{
+        width: 90%;  
+        height: 400px;      
+    }
+
+    /* Clearance - Deals*/
+    .clearance-deals-content{
+        width: 90%;
+    }
+
+    .product{
+        width:100%;
+        text-align: center;
+    }
+
+    .product img{
+        width: 90%;
+        height:200px;
+        margin: 0 auto;
+        object-fit: fill;
+        padding: 0 3%;
+    }
+
+     /* Footer*/
+     #footer{
+        display: block;
+        width: 100%;
+        font-size: 0.5rem;
+    }
+
+    .container{
+        width: 100%;
+        font-size: 0.9rem;
+        margin-top: 20px;
+        padding-left: 10px;
+        text-align: center;
+    }
+
+    .container ul{
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .container li{
+       margin-left: 20px;
+
+    }
+
+    .container i{
+        width:10px;
+        padding-right: 20px;
+    }
+
+    .container.bigger-container ul{
+        display: block;
+        text-align: CENTER;
+    }
+
+    #form{
+        text-align: center;
+    }
+
+}
+
+
+
+
+/* MOBILE */
+ @media screen and (max-width:800px){
+
+    /* Header*/
+    #header{
+        display: block;
+        content: "";
+        display: table;
+        clear: both;
+        margin-bottom: 20px;
+    }
+
+    .logo-container {
+        width: 50%;
+        margin: 0 0 20px 20px;
+    }
+
+    .logo {
+        text-align: left;
+    }
+
+    .search-nav-container{
+        float: left;
+        width: 100%;
+    }
+    .search-nav-container label{
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    #search-form{
+        position: absolute;
+        top: 70px;
+        left: 70px;
+        z-index: 1000;
+    }
+
+    .input-box{
+        height: 30px;
+        width: 150px;
+
+    }
+
+    #search-btn{
+        font-size: 1.2rem;
+    }
+    
+    .nav{
+        position: absolute;
+        width: 100%;
+        top: 70px;
+        left: 20px;
+
+    }
+
+    #nav-bar{
+        width: 100%;
+        display: none;       
+    }
+
+    #nav-bar ul{
+        display: block;
+        position: absolute;
+        width: 90%;
+        top: 0px;
+        left: 20px;
+        text-align: left;
+        z-index: 1000;
+        opacity: 1;
+        background-color: var(--head-color);
+    }
+
+    #nav-bar a{
+        display: block;
+        border-bottom: 1px solid var(--bg-color);
+    }
+
+    #toggle:checked +#nav-bar{
+        display: block;
+    }
+
+    .btn-container{
+        width: 35%;
+        position: absolute;
+        top: 72px;
+        right: -20px;
+        text-align: right;
+        padding-right: 20px;
+    }
+
+    .iconbtn{
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+
+    #main{
+        clear: both;
+    }
+
+    /* Home*/
+    .home-titles{
+        display: block;
+        margin: 20px auto 30px auto; 
+    }
+    
+    #home h1{
+        font-size: 2rem;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .discount-container{
+        width: 100%;
+    }
+    
+    #home h2{
+        font-size: 1.5rem;
+    }
+
+    .btn-shop{
+        width: 100px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    
+    /* Inspiration*/
+    .col-8{
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .glide img{
+        width: 90%;
+        height: 400px;
+        object-fit: cover;
+    }
+    
+    #video{
+        width: 90%;  
+        height: 200px;      
+    }
+    
+
+
+    /* Clearance - Deals*/
+    .clearance-deals-content{
+        display: block;
+    }
+
+    .product{
+        width:100%;
+        text-align: center;
+    }
+
+    .product img{
+        width: 90%;
+        height: auto;
+        margin: 20px auto 0 auto;
+        object-fit: fill;
+        padding: 0 3%;
+    }
+
+    .product .product-description, .product .product-price{
+        font-size: 0.8rem;
+    }
+
+    #clearance-deals > a{
+        font-size: 1.2rem;
+    }
+    
+    #clearance-deals > a > span{
+        font-size: 1.8rem;
+        margin: 20px 0;
+    }
+
+    /*Footer */
+    .notes{
+        font-size: 0.7rem;
+    }
+
+ }
